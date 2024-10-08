@@ -1,4 +1,4 @@
-package com.example.valorant.jogador;
+package com.example.evento.localizacao;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -20,11 +20,6 @@ public class Localizacao {
     private String cep;
     private String complemento;
     private String endereco;
-
-        // Relacionamento com Local
-        @ManyToOne
-        @JoinColumn(name = "id_local", referencedColumnName = "id", nullable = false)
-        private Local local;
 
     public Localizacao(LocalizacaoRequestDTO data) {
         this.cidade = data.cidade();

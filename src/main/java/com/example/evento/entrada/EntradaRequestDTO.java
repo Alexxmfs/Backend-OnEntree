@@ -1,7 +1,6 @@
-package com.example.valorant.jogador;
+package com.example.evento.entrada;
 
 public record EntradaRequestDTO(
         Long id, 
-        int quantidade,
-        Long idLocal
+        int quantidade
 ) { }

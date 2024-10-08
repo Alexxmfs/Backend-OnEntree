@@ -1,15 +1,13 @@
-package com.example.valorant.jogador;
+package com.example.evento.entrada;
 
 public record EntradaResponseDTO(
     Long id, 
-    int quantidade,
-    Long idLocal
+    int quantidade
 ) {
     public EntradaResponseDTO(Entrada entrada) {
         this(
             entrada.getId(),
-            entrada.getQuantidade(),
-            entrada.getLocal().getId()
+            entrada.getQuantidade()
         );
     }
 }

@@ -1,7 +1,6 @@
-package com.example.valorant.jogador;
+package com.example.evento.catraca;
 
 public record CatracaRequestDTO(
-        Long id, 
-        int quantidade,
-        Long idLocal
+        Long id,
+        int quantidade
 ) { }

@@ -1,4 +1,4 @@
-package com.example.valorant.jogador;
+package com.example.evento.contato;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -17,11 +17,6 @@ public class Contato {
 
     private String email;
     private String telefone;
-
-        // Relacionamento com Local
-        @ManyToOne
-        @JoinColumn(name = "id_local", referencedColumnName = "id", nullable = false)
-        private Local local;
 
     public Contato(ContatoRequestDTO data) {
         this.email = data.email();

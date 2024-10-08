@@ -1,4 +1,4 @@
-package com.example.valorant.jogador;
+package com.example.evento.local;
 
 public record LocalRequestDTO(
         Long id_local, 

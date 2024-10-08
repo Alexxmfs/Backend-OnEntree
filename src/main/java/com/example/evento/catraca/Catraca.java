@@ -1,10 +1,10 @@
-package com.example.valorant.jogador;
+package com.example.evento.catraca;
 
 import jakarta.persistence.*;
 import lombok.*;
 
-@Table(name = "catraca")
-@Entity(name = "catraca")
+@Table(name = "catracas")
+@Entity(name = "catracas")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -14,12 +14,7 @@ public class Catraca {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private int quatidade;
-
-    // Relacionamento com Local
-    @ManyToOne
-    @JoinColumn(name = "id_local", referencedColumnName = "id", nullable = false)
-    private Local local;
+    private int quantidade;
 
     public Catraca(CatracaRequestDTO data) {
         this.quantidade = data.quantidade();

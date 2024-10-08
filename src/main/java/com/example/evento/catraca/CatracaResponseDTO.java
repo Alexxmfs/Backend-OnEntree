@@ -1,15 +1,13 @@
-package com.example.valorant.jogador;
+package com.example.evento.catraca;
 
 public record CatracaResponseDTO(
-    Long id, 
-    int quantidade,
-    Long idLocal
+    Long id,
+    int quantidade
 ) {
     public CatracaResponseDTO(Catraca catraca) {
         this(
             catraca.getId(),
-            catraca.getQuantidade(),
-            catraca.getLocal().getId()
+            catraca.getQuantidade()
         );
     }
 }

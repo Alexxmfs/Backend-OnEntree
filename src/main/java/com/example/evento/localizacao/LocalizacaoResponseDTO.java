@@ -1,4 +1,4 @@
-package com.example.valorant.jogador;
+package com.example.evento.localizacao;
 
 public record LocalizacaoResponseDTO(
     Long id, 
@@ -6,8 +6,7 @@ public record LocalizacaoResponseDTO(
     String estado,
     String cep,
     String complemento,
-    String endereco,
-    Long idLocal
+    String endereco
 ) {
     public LocalizacaoResponseDTO(Localizacao localizacao) {
         this(
@@ -16,8 +15,7 @@ public record LocalizacaoResponseDTO(
             localizacao.getEstado(),
             localizacao.getCep(),
             localizacao.getComplemento(),
-            localizacao.getEndereco(),
-            localizacao.getIdLocal().getId()
+            localizacao.getEndereco()
         );
     }
 }

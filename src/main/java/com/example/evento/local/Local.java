@@ -1,4 +1,4 @@
-package com.example.valorant.jogador;
+package com.example.evento.local;
 
 import jakarta.persistence.*;
 import lombok.*;

@@ -1,4 +1,4 @@
-package com.example.valorant.jogador;
+package com.example.evento.localizacao;
 
 public record LocalizacaoRequestDTO(
         Long id, 
@@ -6,6 +6,5 @@ public record LocalizacaoRequestDTO(
         String estado,
         String cep,
         String complemento,
-        String endereco,
-        Long idLocal
+        String endereco
 ) { }

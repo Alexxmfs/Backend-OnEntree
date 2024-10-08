@@ -1,5 +1,6 @@
-package com.example.valorant.jogador;
+package com.example.evento.evento;
 
+import com.example.evento.evento.EventoRequestDTO;
 import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDate;
@@ -22,16 +23,10 @@ public class Evento {
     private LocalTime horarioEvento;
     private String tipo;
 
-    // Relacionamento com Local
-    @ManyToOne
-    @JoinColumn(name = "id_local", referencedColumnName = "id", nullable = false)
-    private Local local;
-
-    public Evento(EventoRequestDTO data, Local local) {
+    public Evento(EventoRequestDTO data) {
         this.nome = data.nome();
         this.data = data.data();
         this.horarioEvento = data.horarioEvento();
         this.tipo = data.tipo();
-        this.local = local;
     }
 }

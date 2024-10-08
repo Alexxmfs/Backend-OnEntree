@@ -1,4 +1,4 @@
-package com.example.valorant.jogador;
+package com.example.evento.evento;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -8,8 +8,7 @@ public record EventoResponseDTO(
     String nome,
     LocalDate data,
     LocalTime horarioEvento,
-    String tipo,
-    Long idLocal
+    String tipo
 ) {
     public EventoResponseDTO(Evento evento) {
         this(
@@ -17,8 +16,7 @@ public record EventoResponseDTO(
             evento.getNome(),
             evento.getData(),
             evento.getHorarioEvento(),
-            evento.getTipo(),
-            evento.getLocal().getId()
+            evento.getTipo()
         );
     }
 }

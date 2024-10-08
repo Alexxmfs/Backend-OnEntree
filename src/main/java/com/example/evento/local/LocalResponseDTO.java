@@ -1,4 +1,4 @@
-package com.example.valorant.jogador;
+package com.example.evento.local;
 
 public record LocalResponseDTO(
     Long id_local, 
@@ -9,7 +9,7 @@ public record LocalResponseDTO(
 ) {
     public LocalResponseDTO(Local local) {
         this(
-            local.getId_local(),
+            local.getId(),
             local.getNome(),
             local.getApelido(),
             local.getTipo(),
